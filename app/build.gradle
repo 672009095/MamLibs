@@ -17,7 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    flavorDimensions "version"
+    /*flavorDimensions "version"
     // multiple flavours. produces the following artifacts: -productionRelease.aar, -sandboxRelease.aar, -productionDebug.aar, -sandboxDebug.aar
     productFlavors {
         production {
@@ -28,7 +28,7 @@ android {
             dimension "version"
             buildConfigField 'String', 'ENV', '"SANDBOX"'
         }
-    }
+    }*/
 
     publishNonDefault true
 }
