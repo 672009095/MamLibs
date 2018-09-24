@@ -23,10 +23,12 @@ android {
         production {
             dimension "version"
             buildConfigField 'String', 'ENV', '"PRODUCTION"'
+            buildConfigField 'String', 'BASE', '"http://api.ass.dev.codigo.id:1337/api/"'
         }
         sandbox {
             dimension "version"
             buildConfigField 'String', 'ENV', '"SANDBOX"'
+            buildConfigField 'String', 'BASE', '"http://api.ass.dev.codigo.id:1337/api/"'
         }
     }*/
 
@@ -50,4 +52,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 }
