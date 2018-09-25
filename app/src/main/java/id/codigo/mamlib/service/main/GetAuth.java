@@ -40,7 +40,7 @@ public class GetAuth extends BaseActivity<MamCallback,GetAuthPresenter> implemen
 
     @Override
     public GetAuthPresenter createPresenter() {
-        return new GetAuthPresenter();
+        return new GetAuthPresenter(this.context);
     }
 
     @Override
