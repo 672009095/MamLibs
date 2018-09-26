@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 GetFeed.make(this).setStart("0").setCount("7").setSort("obj_id").setBy("DESC").setCredential(credential).create(new MamCallback<GetFeedResponse>() {
                     @Override
                     public void onSuccess(GetFeedResponse response) {
-
+                        txt1.setText(response.getData().toString());
                     }
 
                     @Override
