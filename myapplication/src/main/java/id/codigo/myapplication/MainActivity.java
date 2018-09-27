@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     @Override
                     public void onFailure(String message) {
-
+                        txt1.setText(message);
                     }
                 });
                 break;
@@ -114,12 +114,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 GetFeed.make(this).setStart("0").setCount("7").setSort("obj_id").setBy("DESC").setCredential(credential).create(new MamCallback<GetFeedResponse>() {
                     @Override
                     public void onSuccess(GetFeedResponse response) {
-                        txt1.setText(response.getData().toString());
+                        txt2.setText(response.getData().toString());
                     }
 
                     @Override
                     public void onFailure(String message) {
-
+                        txt2.setText(message);
                     }
                 });
                 break;
@@ -127,12 +127,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 GetProgramDetail.make(this).setProgram_Id("6905").setCredential(credential).create(new MamCallback<GetProgramDetailResponse>() {
                     @Override
                     public void onSuccess(GetProgramDetailResponse response) {
-
+                        txt3.setText(response.getData().toString());
                     }
 
                     @Override
                     public void onFailure(String message) {
-
+                        txt3.setText(message);
                     }
                 });
                 break;
@@ -140,12 +140,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 GetProgramList.make(this).setCredential(credential).create(new MamCallback<GetProgramListResponse>() {
                     @Override
                     public void onSuccess(GetProgramListResponse response) {
-
+                        txt4.setText(response.getData().toString());
                     }
 
                     @Override
                     public void onFailure(String message) {
-
+                        txt4.setText(message);
                     }
                 });
                 break;
@@ -153,12 +153,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 GetTokenVideo.make(this).setVideo_id("").setCredential(credential).create(new MamCallback<GetVideoTokenResponse>() {
                     @Override
                     public void onSuccess(GetVideoTokenResponse response) {
-
+                        txt5.setText(response.getData().toString());
                     }
 
                     @Override
                     public void onFailure(String message) {
-
+                        txt5.setText(message);
                     }
                 });
                 break;
@@ -166,12 +166,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 GetVideo.make(this).setVideo_Id("").setCredential(credential).create(new MamCallback<GetVideoResponse>() {
                     @Override
                     public void onSuccess(GetVideoResponse response) {
-
+                        txt6.setText(response.getData().toString());
                     }
 
                     @Override
                     public void onFailure(String message) {
-
+                        txt6.setText(message);
                     }
                 });
                 break;
@@ -179,12 +179,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 SearchCategory.make(this).setCategory("").setCredential(credential).create(new MamCallback<SearchCategoryResponse>() {
                     @Override
                     public void onSuccess(SearchCategoryResponse response) {
-
+                        txt7.setText(response.getData().toString());
                     }
 
                     @Override
                     public void onFailure(String message) {
-
+                        txt7.setText(message);
                     }
                 });
                 break;
@@ -192,12 +192,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 SearchFeed.make(this).setCredential(credential).setQuery("").create(new MamCallback<SearchFeedResponse>() {
                     @Override
                     public void onSuccess(SearchFeedResponse response) {
-
+                        txt8.setText(response.getData().toString());
                     }
 
                     @Override
                     public void onFailure(String message) {
-
+                        txt8.setText(message);
                     }
                 });
                 break;
@@ -205,12 +205,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 SearchTag.make(this).setTag("").setCredential(credential).create(new MamCallback<SearchTagResponse>() {
                     @Override
                     public void onSuccess(SearchTagResponse response) {
-
+                        txt9.setText(response.getData().toString());
                     }
 
                     @Override
                     public void onFailure(String message) {
-
+                        txt9.setText(message);
                     }
                 });
                 break;
